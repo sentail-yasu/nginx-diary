@@ -22,6 +22,6 @@ workflows:
           requires:
             - aws-ecr/build-and-push-image
           family: 'nginx2' # ECSのタスク定義名
-          cluster-name: '${ECS_ARN}'  #ECSのクラスターのARN
+          cluster-name: 'nginx-fargate'  #ECSのクラスターのARN
           service-name: 'nginx-service'  #サービス名
           container-image-name-updates: "container=nginx2,tag=${CIRCLE_SHA1}"
