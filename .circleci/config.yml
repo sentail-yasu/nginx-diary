@@ -24,4 +24,4 @@ workflows:
           family: 'nginx2' # ECSのタスク定義名
           cluster-name: '${ECS_ARN}'  #ECSのクラスターのARN
           service-name: 'nginx-service'  #サービス名
-          container-image-name-updates: "container=nginx,tag=${CIRCLE_SHA1}"
+          container-image-name-updates: "container=nginx2,tag=${CIRCLE_SHA1}"
